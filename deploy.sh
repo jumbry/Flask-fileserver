@@ -15,7 +15,7 @@
 set -ex
 
 # [START getting_started_gce_create_instance]
-MY_INSTANCE_NAME="Flask-fileserver"
+MY_INSTANCE_NAME="flask-fileserver"
 ZONE=us-central1-a
 
 gcloud compute instances create $MY_INSTANCE_NAME \
