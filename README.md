@@ -17,7 +17,10 @@ and deploying the sample code. A brief summary for deploying the code from this 
 5. If you wish, edit deploy.sh to enter your preferred values for MY_INSTANCE_NAME and ZONE
 (these values set the name of the virtual machine and the datacentre in which it is deployed)
 6. In Cloud Shell select your chosen project by entering: gcloud config set project YOUR_PROJECT_ID
-7. 
+7. RUN deploy.sh - do we need to make it executable first?
+8. deploy.sh creates the new instance, runs startup-script.sh to setup the instance, and opens the firewall to allow access to port 8080
+
+EXPLAIN the startup script
 
 
 https://cloud.google.com/console/cloudshell/open?git_repo=https://github.com/jwrbarnes/Flask-fileserver
