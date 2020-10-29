@@ -11,7 +11,8 @@ Please refer to the tutorial for full instructions on configuring, running, and 
 A brief summary for deploying the code from this folder follows:
 
 1. In the Google Cloud Console, select or create a project and note YOUR_PROJECT_ID
-2. Enable the Compute Engine API
+2. Enable the Compute Engine API https://console.cloud.google.com/flows/enableapi?apiid=compute
+(you can usually ignore the subsequent questions about credentials)
 3. In the Google Cloud Console, open Cloud Shell
 4. In Cloud Shell, clone this repository by entering: cloudshell_open --repo_url "https://github.com/jwrbarnes/Flask-fileserver"
 
