@@ -1,14 +1,12 @@
 # Flask-fileserver
 
- This folder contains code for deploying a simple Flask web fileserver on a virtual machine in
- Google Compute Engine.
+ This folder contains code for deploying a simple web fileserver using Python, gunicorn and Flask on a virtual machine in Google Compute Engine.
 
  It builds from the sample code for the [Deploying to Google Compute Engine][tutorial-gce] tutorial. 
  
  The original code is at: https://github.com/GoogleCloudPlatform/getting-started-python.git
 
-Please refer to the tutorial for full instructions on configuring, running,
-and deploying the sample code. 
+Please refer to the tutorial for full instructions on configuring, running, and deploying the sample code. 
 
 A brief summary for deploying the code from this folder follows:
 
@@ -18,7 +16,7 @@ A brief summary for deploying the code from this folder follows:
 4. In Cloud Shell, clone this repository by entering: cloudshell_open --repo_url "https://github.com/jwrbarnes/Flask-fileserver"
    (steps 3 & 4 can be executed automatically by clicking: https://cloud.google.com/console/cloudshell/open?git_repo=https://github.com/jwrbarnes/Flask-fileserver)
 5. If you wish, edit <b>deploy.sh</b> to enter your preferred values for MY_INSTANCE_NAME and ZONE
-(these values set the name of the virtual machine and the datacentre in which it is deployed)
+   (these values set the name of the virtual machine and the datacentre in which it is deployed)
 6. In Cloud Shell select your chosen project by entering: gcloud config set project YOUR_PROJECT_ID
 7. RUN <b>deploy.sh</b> - do we need to make it executable first?
 8. <b>deploy.sh</b> creates the new VM instance, runs <b>startup-script.sh</b> to setup the instance, and opens the firewall to allow access to port 8080
@@ -31,7 +29,7 @@ For information, <b>startup-script.sh</b> does the following to setup the instan
 * installs the Python modules listed in <b>requirements.txt</b>
 * configures the Python environment to run in virtualenv 
 
-Configuration for the Python environment is set in <b>python-app.conf</b>
+The installation is placed in /opt/app. Configuration for the Python environment is set in <b>python-app.conf</b>
 
 This uses honcho to run the gunicorn web server with the Python code <b>main.py</b> configured in the <b>procfile</b>
 
@@ -40,6 +38,15 @@ This uses honcho to run the gunicorn web server with the Python code <b>main.py<
 * list all files that have been uploaded using the url /list
 * download a file by clicking the link from /list
 
+<b>Notes:</b> 
+* As usual in Flask, <b>main.py</b> uses html templates located in /opt/app/templates
+* If you extend <b>main.py</b> to do more (and that's the idea!), remember to add any additional modules to <b>requirements.txt</b> 
+and also install them with pip to ensure they are available
+* Every time you modify <b>main.py</b>, your changes will not take effect until Supervisor updates to run the Python app. To force this, enter the commands:
+
+supervisorctl reread
+
+supervisorctl update
 
 
  [tutorial-gce]: https://cloud.google.com/python/tutorials/getting-started-on-compute-engine
