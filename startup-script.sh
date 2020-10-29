@@ -36,9 +36,11 @@ git clone https://github.com/jwrbarnes/Flask-fileserver /opt/app
 virtualenv -p python3 /opt/app/env
 source /opt/app/env/bin/activate
 /opt/app/env/bin/pip install -r /opt/app/requirements.txt
+mkdir -p /var/www/uploads
 
 # Set ownership to newly created account
 chown -R pythonapp:pythonapp /opt/app
+chown -R pythonapp:pythonapp /var/www/uploads
 
 # Put supervisor configuration in proper place
 cp /opt/app/python-app.conf /etc/supervisor/conf.d/python-app.conf
