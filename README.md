@@ -1,6 +1,6 @@
 # Flask-fileserver
 
- This folder contains code for deploying a simple web fileserver using Python, gunicorn and Flask on a virtual machine in Google Compute Engine.
+ This folder contains code for deploying a simple web fileserver using Python, gunicorn and Flask on a Google Compute Engine instance.
 
  It builds from the sample code for the [Deploying to Google Compute Engine][tutorial-gce] tutorial. 
  
