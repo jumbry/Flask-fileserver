@@ -8,7 +8,9 @@
  The original code is at: https://github.com/GoogleCloudPlatform/getting-started-python.git
 
 Please refer to the tutorial for full instructions on configuring, running,
-and deploying the sample code. A brief summary for deploying the code from this folder follows:
+and deploying the sample code. 
+
+A brief summary for deploying the code from this folder follows:
 
 1. In the Google Cloud Console, select or create a project and note YOUR_PROJECT_ID
 2. Enable the Compute Engine API
