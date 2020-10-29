@@ -17,6 +17,6 @@ and deploying the sample code. A brief summary for deploying the code from this 
 5. 
 
 
-https://cloud.google.com/console/cloudshell/open?git_branch=master&git_repo=https://github.com/GoogleCloudPlatform/getting-started-python.git&working_dir=gce
+https://cloud.google.com/console/cloudshell/open?git_branch=master&git_repo=https://github.com/jwrbarnes/Flask-fileserver
 
  [tutorial-gce]: https://cloud.google.com/python/tutorials/getting-started-on-compute-engine
