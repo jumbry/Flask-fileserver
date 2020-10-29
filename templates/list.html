@@ -1,0 +1,8 @@
+<!doctype html>
+<title>File list</title>
+<h1>File list:</h1>
+{% for file in files %}
+<p><a href="/download/{{ file }}">{{ file }}</a></p>
+{% else %}
+  <h1>No files found</h1>
+{% endfor %}
