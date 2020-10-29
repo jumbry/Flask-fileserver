@@ -20,9 +20,10 @@ A brief summary for deploying the code from this folder follows:
 5. If you wish, edit <b>deploy.sh</b> to enter your preferred values for MY_INSTANCE_NAME and ZONE
    (these values set the name of the virtual machine and the datacentre in which it is deployed)
 6. In Cloud Shell select your chosen project by entering: gcloud config set project YOUR_PROJECT_ID
-7. RUN <b>deploy.sh</b> - do we need to make it executable first?
-8. <b>deploy.sh</b> creates the new VM instance, runs <b>startup-script.sh</b> to setup the instance, and opens the firewall to allow access to port 8080
-9. the public IP address of the web server can be found in the Compute Engine dashboard
+7. Make <b>deploy.sh</b> by entering the command: chmod +x deploy.sh
+8. Run <b>deploy.sh</b> by entering the command: ./deploy.sh
+9. <b>deploy.sh</b> creates the new VM instance, runs <b>startup-script.sh</b> to setup the instance, and opens the firewall to allow access to port 8080
+10. the public IP address of the web server can be found in the Compute Engine dashboard
 
 For information, <b>startup-script.sh</b> does the following to setup the instance (using the sample code from the tutorial):
 * installs the Stackdriver logging agent to collect logs from syslog so they can be viewed from the Google Cloud dashboard
