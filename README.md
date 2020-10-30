@@ -23,7 +23,7 @@ A brief summary for deploying the code from this folder follows:
 7. Make <b>deploy.sh</b> executable by entering the command: chmod +x deploy.sh
 8. Run <b>deploy.sh</b> by entering the command: ./deploy.sh
 9. <b>deploy.sh</b> creates the new VM instance, runs <b>startup-script.sh</b> to setup the instance, and opens the firewall to allow access to port 8080
-10. the public IP address of the web server can be found in the Compute Engine dashboard
+10. the public IP address of the web server can be found in the Compute Engine dashboard or by entering the command: gcloud compute instances list
 
 For information, <b>startup-script.sh</b> does the following to setup the instance (using the sample code from the tutorial):
 * installs the Stackdriver logging agent to collect logs from syslog so they can be viewed from the Google Cloud dashboard
