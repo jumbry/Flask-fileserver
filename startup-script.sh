@@ -30,7 +30,7 @@ useradd -m -d /home/pythonapp pythonapp
 
 # Fetch source code
 export HOME=/root
-git clone https://github.com/jwrbarnes/Flask-fileserver /opt/app
+git clone https://github.com/jumbry/Flask-fileserver /opt/app
 
 # Python environment setup
 virtualenv -p python3 /opt/app/env
