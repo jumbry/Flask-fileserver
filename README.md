@@ -16,7 +16,7 @@ A brief summary for deploying the code from this folder follows:
 3. In the Google Cloud Console, open Cloud Shell
 4. In Cloud Shell, clone this repository by entering: cloudshell_open --repo_url "https://github.com/jwrbarnes/Flask-fileserver"
 
-   (steps 3 & 4 can be executed automatically by clicking: https://cloud.google.com/console/cloudshell/open?git_repo=https://github.com/jwrbarnes/Flask-fileserver)
+   (steps 3 & 4 can be executed automatically by clicking: https://cloud.google.com/console/cloudshell/open?git_repo=https://github.com/jumbry/Flask-fileserver)
 5. If you wish, edit <b>deploy.sh</b> to enter your preferred values for MY_INSTANCE_NAME and ZONE
    (these values set the name of the virtual machine and the datacentre in which it is deployed)
 6. In Cloud Shell select your chosen project by entering: gcloud config set project YOUR_PROJECT_ID
